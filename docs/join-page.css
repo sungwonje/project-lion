@@ -1,0 +1,224 @@
+/* web font */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html>body {
+  font-family: 'GmarketSansMedium';
+}
+
+/* custom library */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  --y-gap: 70px;
+  --x-gap: 20px;
+  --cc: 1;
+  gap: var(--y-gap) var(--x-gap);
+}
+
+.flex-grid>* {
+  width: calc(100% / var(--cc) - (var(--x-gap) * (var(--cc) - 1)) / var(--cc));
+}
+
+/* library */
+/* PC con */
+.pc-show .con {
+  max-width: var(--site-width);
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* 모바일 con */
+.mobile-show .con {
+  max-width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* 스와이퍼 */
+.swiper-container {
+  max-width: 1920px;
+  height: 440px;
+  position: relative;
+}
+
+.swiper-wrapper {
+  width: 1240px;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide .text-wrap {
+  position: absolute;
+  top: 50%;
+  width: 1240px;
+}
+
+.swiper-slide .btn-look-close {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.swiper-slide .number {
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.btn-swiper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-swiper-left>span,
+.btn-swiper-right>span {
+  color: white;
+  font-size: 2rem;
+}
+
+/* 로고 */
+.main-logo-row {
+  --add: 1px;
+  --color: black;
+  color: var(--color);
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 var(--add) 0 var(--color),
+    0 calc(var(--add) * -1) 0 var(--color),
+    var(--add) 0 0 var(--color),
+    calc(var(--add) * -1) 0 0 var(--color);
+}
+
+.main-logo-col {
+  --add: 1px;
+  --color: black;
+  color: var(--color);
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+  text-shadow: 0 var(--add) 0 var(--color),
+    0 calc(var(--add) * -1) 0 var(--color),
+    var(--add) 0 0 var(--color),
+    calc(var(--add) * -1) 0 0 var(--color);
+}
+
+
+/* custom */
+:root {
+  --site-width: 1240px;
+}
+
+body {
+  background-color: rgba(237, 237, 235);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+body>* {
+  white-space: nowrap;
+}
+
+/* 반응형(미디어쿼리) */
+@media (min-width: 1000px) {
+  .join-member-page {
+    padding: 3rem 5rem;
+  }
+}
+
+@media (max-width: 999px) {
+  .join-member-page {
+    padding: 4rem 1rem;
+  }
+}
+
+/* join-member-page */
+.join-member-page {
+  min-width: 500px;
+}
+
+input[type="text"] {
+  border: 1px solid lightgray;
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+
+input[type="password"] {
+  border: 1px solid lightgray;
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: orange;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  border: 0;
+}
+
+input[placeholder] {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.btn {
+  padding: 1rem;
+  border: 1px solid orange;
+  border-radius: 0.7rem;
+}
+
+.btn-certify {
+  border-color: orange;
+  color: orange;
+
+}
+
+.btn-confirm {
+  color: white;
+  background-color: orange;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.password-info>li {
+  position: relative;
+  padding-left: 20px;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.password-info>li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left: 4px;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입 - 성원제</title>
+
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- 테일윈드 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- 페이지 CSS 불러오기 -->
+  <link rel="stylesheet" href="join-page.css">
+</head>
+
+<body>
+  <!-- 작업 -->
+  <!-- 회원가입 -->
+  <div class="join-member-page bg-white w-3/5 mx-auto rounded-2xl">
+    <div class="join-member-page__wrap">
+      <a href="index.html" class="main-logo-col block">
+        PROJECT <br>
+        LION
+      </a>
+      <div class="join-member-page__box">
+        <p class="font-bold text-2xl mt-16">회원가입</p>
+        <div class="name-wrap mt-8">
+          <p>이름</p>
+          <input type="text" class="name-input box w-full mt-3" placeholder="이름을 알려주세요">
+        </div>
+        <div class="id-wrap mt-6">
+          <p>아이디</p>
+          <input type="text" class="id-input box w-full mt-3" placeholder="likelion@gmail.com">
+        </div>
+        <div class="phone-wrap mt-6">
+          <p>휴대폰 번호</p>
+          <div class="inner flex mt-3">
+            <input type="text" class="id-input box flex-1" placeholder="-없이 숫자만 입력해주세요.">
+            <button class="btn-certify btn ml-2">인증하기</button>
+          </div>
+          <div class="inner flex mt-3">
+            <input type="text" class="confirm-input box flex-1">
+            <button class="btn-confirm btn ml-2">인증번호 확인</button>
+          </div>
+        </div>
+        <div class="password-wrap mt-6">
+          <div class="password mt-10">
+            <p>비밀번호</p>
+            <input type="password" class="password-input box w-full mt-2" placeholder="비밀번호를 입력해주세요.">
+          </div>
+          <ul class="password-info mt-2">
+            <li>10자 이상 입력</li>
+            <li>영문/숫자/특수문자 중 2개 이상 포함</li>
+            <li>동일한 숫자 3개 이상 연속 사용 불가</li>
+          </ul>
+          <div class="password-confirm mt-8">
+            <p>비밀번호 확인</p>
+            <input type="password" class="password-input box w-full mt-2" placeholder="비밀번호를 다시 한 번 입력해주세요.">
+          </div>
+        </div>
+        <ul class="checkbox-wrap mt-16">
+          <li class="flex items-center pb-4" style="border-bottom: 1px solid rgba(0,0,0,0.2);">
+            <input type="checkbox" class="checkbox-agree-all">
+            <p class="text-xl font-bold ml-3">전체동의</p>
+          </li>
+          <li class="flex items-center mt-10">
+            <input type="checkbox" class="checkbox-agree mr-3">
+            <p class="mr-3">서비스 이용약관 동의 (필수)</p>
+            <a href="#" class="text-gray-400">상세보기 ></a>
+          </li>
+          <li class="flex items-center mt-3">
+            <input type="checkbox" class="checkbox-agree mr-3">
+            <p class="mr-3">개인정보 수집 및 동의 (필수)</p>
+            <a href="#" class="text-gray-400">상세보기 ></a>
+          </li>
+          <li class="flex items-center mt-3">
+            <input type="checkbox" class="checkbox-agree mr-3">
+            <p class="mr-3">만 14세 이상입니다 (필수)</p>
+          </li>
+          <li class="flex items-center mt-3">
+            <input type="checkbox" class="checkbox-agree mr-3">
+            <p class="mr-3">광고성 정보 수신 동의 (선택)</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 페이지 JS 불러오기 -->
+  <script src="join-page.js"></script>
+</body>
+
+</html>
